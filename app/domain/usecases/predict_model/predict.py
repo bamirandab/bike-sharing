@@ -32,7 +32,7 @@ class BikeModel:
 
     def load_vec(self) -> DictVectorizer:
         self.client.download_file(self.BUCKET_NAME,self.PATH_VEC, '/tmp/vect.pkl')
-        return pickle.load(open('/tmp/vect.h5', 'rb'))
+        return pickle.load(open('/tmp/vect.pkl', 'rb'))
 
     def predict(self):
         data = self.vec.transform(self.request_data.dict())
