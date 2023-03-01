@@ -28,11 +28,11 @@ class BikeModel:
 
     def load_model(self) -> tf.keras.Model:
         self.client.download_file(self.BUCKET_NAME,self.PATH_MODEL, '/tmp/model.h5')
-        return tf.keras.models.load_model('model.h5')
+        return tf.keras.models.load_model('/tmp/model.h5')
 
     def load_vec(self) -> DictVectorizer:
         self.client.download_file(self.BUCKET_NAME,self.PATH_VEC, '/tmp/vect.pkl')
-        return pickle.load(open('vect.pkl', 'rb'))
+        return pickle.load(open('/tmp/model.h5', 'rb'))
 
     def predict(self):
         data = self.vec.transform(self.request_data.dict())
