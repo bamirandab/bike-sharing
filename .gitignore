@@ -1,3 +1,6 @@
 venv
 .idea
 .env
+*.pkl
+*.h5
+websocket-client

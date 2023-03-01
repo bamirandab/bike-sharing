@@ -7,16 +7,17 @@ from datetime import datetime
 
 class RequestPredictModel(BaseModel):
     season: str
-    month: str
-    year: str
+    mnth: str
+    yr: int
     holiday: int
+    weekday: str
+    workingday: int
+    weathersit: str
     temp: float
     atemp: float
     hum: float
     windspeed: float
-    cnt_1: int
-    cnt_7: int
 
 
-class ConsultResponseModel(BaseModel):
-    results: List[Dict]
+class ResponsePredictModel(BaseModel):
+    bike_number: int
