@@ -4,3 +4,4 @@ venv
 *.pkl
 *.h5
 websocket-client
+tmp
